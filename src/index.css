@@ -1,0 +1,93 @@
+@import "tailwindcss";
+@import "@xyflow/react/dist/style.css";
+
+:root {
+  --font-space: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+  font-family: var(--font-inter);
+  background-color: #070B1A;
+  color: #E8ECFF;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--font-space);
+}
+
+.font-mono-code {
+  font-family: var(--font-mono);
+}
+
+/* Custom React Flow Theme Overrides for Forensic Midnight */
+.react-flow__pane {
+  background-color: transparent !important;
+}
+
+.react-flow__handle {
+  background-color: #5B6CFF !important;
+  border: 2px solid #0E1530 !important;
+}
+
+.react-flow__controls {
+  background: #0E1530 !important;
+  border: 1px solid rgba(148, 163, 255, 0.14) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+}
+
+.react-flow__controls button {
+  background: #141C3D !important;
+  border-bottom: 1px solid rgba(148, 163, 255, 0.1) !important;
+  color: #E8ECFF !important;
+}
+
+.react-flow__controls button:hover {
+  background: #1e2a5a !important;
+}
+
+.react-flow__attribution {
+  display: none !important;
+}
+
+/* Animated dash for edges */
+@keyframes flowDash {
+  from {
+    stroke-dashoffset: 24;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animated-edge-path {
+  stroke-dasharray: 6, 6;
+  animation: flowDash 1.2s linear infinite;
+}
+
+.scam-edge-path {
+  stroke-dasharray: 6, 6;
+  animation: flowDash 0.8s linear infinite;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070B1A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1C274E;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2D3D7A;
+}

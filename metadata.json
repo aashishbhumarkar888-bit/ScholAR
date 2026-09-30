@@ -1,0 +1,6 @@
+{
+  "name": "ScholAR: Scholarship Integrity & Reconciliation Engine",
+  "description": "Pre-disbursement evidence-reconciliation sidecar for PFMS treasury payout. Surfaces deterministic relational evidence for human nodal officers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
